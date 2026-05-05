@@ -1,0 +1,219 @@
+/* =========================================
+   index.css - STYLE DE LA PAGE D'ACCUEIL
+   ========================================= */
+
+/* --- 1. RESET ET BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--police-texte);
+    background-color: var(--beige-fond);
+    color: var(--texte-sombre);
+    line-height: 1.6;
+    padding-top: 80px; /* Espace pour le header fixe */
+}
+
+/* --- 2. SECTION ACCUEIL (SLIDER) --- */
+.accueil {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid var(--cuivre);
+}
+
+.diaporama-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 100%;
+    display: flex;
+    animation: glissement 15s linear infinite;
+}
+
+.image-slide {
+    width: 33.333%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.accueil-contenu {
+    position: relative;
+    z-index: 10;
+    color: var(--blanc);
+    max-width: 800px;
+    background: rgba(47, 62, 70, 0.4);
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(3px);
+    text-align: center;
+}
+
+.accueil h1 {
+    font-family: var(--police-titre);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    filter: var(--filter-cuivre);
+}
+
+.bouton {
+    display: inline-block;
+    background-color: var(--cuivre);
+    color: var(--blanc);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.bouton:hover {
+    background-color: var(--vert-principal);
+    transform: scale(1.05);
+}
+
+@keyframes glissement {
+    0%, 30% { transform: translateX(0%); }
+    33%, 63% { transform: translateX(-33.333%); }
+    66%, 96% { transform: translateX(-66.666%); }
+    100% { transform: translateX(0%); }
+}
+
+/* --- 3. SECTION PRÉSENTATION PARTICULIER (BIO) --- */
+.presentation-particulier {
+    padding: 6rem 2rem;
+    background-color: var(--blanc, #FFFFFF);
+    border-bottom: 1px solid rgba(184, 115, 51, 0.1);
+}
+
+.container-presentation {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.presentation-image {
+    flex: 1;
+    text-align: center;
+}
+
+.photo-profil {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 50%;
+    border: 6px solid var(--vert-clair, #8FC0A9);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.presentation-texte {
+    flex: 1.5;
+}
+
+.presentation-texte h2 {
+    font-family: var(--police-titre);
+    color: var(--vert-principal);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.presentation-texte p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.presentation-texte strong {
+    color: var(--cuivre);
+}
+
+/* --- 4. SECTION CRÉATIONS / SOINS (CARTES) --- */
+.presentation-rapide {
+    text-align: center;
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.presentation-rapide h2 {
+    font-family: var(--police-titre);
+    color: var(--vert-principal);
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+}
+
+.grille-presentation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.carte-presentation {
+    background-color: var(--blanc);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    flex: 1 1 300px;
+    max-width: 400px;
+    transition: 0.3s ease;
+    text-align: left;
+}
+
+.carte-presentation:hover {
+    transform: translateY(-10px);
+}
+
+.image-fluide {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--cuivre);
+}
+
+.carte-presentation h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    color: var(--vert-principal);
+}
+
+.carte-presentation p {
+    padding: 0 1.5rem 1.5rem;
+}
+.presentation-texte a {
+    color: var(--cuivre);
+}
+
+/* --- 5. FOOTER --- */
+footer {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--vert-principal);
+    color: var(--blanc);
+}
+
+/* --- 6. RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    body { padding-top: 70px; }
+
+    /* Bio en colonne sur mobile */
+    .container-presentation {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .accueil h1 { font-size: 2.2rem; }
+    
+    .presentation-texte h2 { font-size: 2rem; }
+}

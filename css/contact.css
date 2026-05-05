@@ -1,0 +1,157 @@
+/* ==========================================================================
+   contact.css - PAGE CONTACT
+   ========================================================================== */
+
+/* --- 1. BASE --- */
+body {
+    background-color: var(--beige-fond, #F9F7F2);
+    color: var(--texte-sombre, #2F3E46);
+    font-family: var(--police-texte, sans-serif);
+    padding-top: 80px;
+}
+
+.conteneur {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- 2. HERO --- */
+.en-tete-contact {
+    height: 35vh;
+    min-height: 250px;
+    background: url('../images/fond-contact.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--blanc, #FFFFFF);
+}
+
+.voile-accueil {
+    background: rgba(47, 62, 70, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    margin: 0 1rem;
+}
+
+/* --- 3. MISE EN PAGE GRILLE --- */
+.section-contact {
+    padding: 4rem 0;
+}
+
+.grille-contact {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* --- 4. FORMULAIRE --- */
+.bloc-formulaire {
+    background: var(--blanc, #FFFFFF);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.bloc-formulaire h2 {
+    font-family: var(--police-titre, serif);
+    color: var(--vert-principal, #4A7C59);
+    margin-bottom: 2rem;
+}
+
+.groupe-input {
+    margin-bottom: 1.5rem;
+}
+
+.groupe-input label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.groupe-input input, 
+.groupe-input select, 
+.groupe-input textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    background: #FAFAFA;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.groupe-input input:focus, 
+.groupe-input textarea:focus {
+    outline: none;
+    border-color: var(--cuivre, #B87333);
+}
+
+.bouton-envoyer {
+    background: var(--vert-principal, #4A7C59);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.bouton-envoyer:hover {
+    background: var(--cuivre, #B87333);
+    transform: translateY(-2px);
+}
+
+/* --- 5. INFOS LATÉRALES --- */
+.infos-laterales {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.carte-info {
+    background: var(--blanc, #FFFFFF);
+    padding: 1.8rem;
+    border-radius: 15px;
+    border-left: 5px solid var(--cuivre, #B87333);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.carte-info h3 {
+    font-family: var(--police-titre, serif);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--vert-principal, #4A7C59);
+}
+
+.liste-infos {
+    list-style: none;
+}
+
+.liste-infos li {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.img-zoom {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- 6. RESPONSIVE --- */
+@media screen and (max-width: 992px) {
+    .grille-contact {
+        grid-template-columns: 1fr;
+    }
+    
+    .infos-laterales {
+        order: -1; /* Les infos passent au-dessus du formulaire sur mobile */
+    }
+}

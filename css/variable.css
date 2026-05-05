@@ -1,0 +1,14 @@
+:root {
+    /* Palette de couleurs Nature & Bien-être */
+    --vert-principal: #4A7C59; /* Vert forêt apaisant */
+    --vert-clair: #8FC0A9; /* Vert d'eau doux */
+    --beige-fond: #FAF3E0; /* Beige naturel pour le fond */
+    --cuivre: #B87333; /* Couleur de l'artisanat */
+    --texte-sombre: #2F3E46; /* Gris très foncé pour un texte lisible mais plus doux que le noir */
+    --blanc: #FFFFFF;
+
+    /* Typographie */
+    --police-titre: 'Playfair Display', serif; /* Élégant pour l'artisanat */
+    --police-texte: 'Lato', sans-serif; /* Clair et moderne pour la lecture */
+    --filter-cuivre:drop-shadow(0 0 15px var(--cuivre)) drop-shadow(0 0 30px var(--cuivre));
+}

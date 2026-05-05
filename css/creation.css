@@ -1,0 +1,316 @@
+/* ==========================================================================
+   creations.css - PAGE CRÉATIONS EN CUIVRE
+   ========================================================================== */
+
+/* --- 1. BASE ET RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--beige-fond, #F9F7F2);
+    color: var(--texte-sombre, #2F3E46);
+    font-family: var(--police-texte, sans-serif);
+    line-height: 1.6;
+    padding-top: 80px; /* Évite que le header fixe ne masque le contenu */
+}
+
+.conteneur {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+/* --- 2. EN-TÊTE DE PAGE (HERO) --- */
+.en-tete-creations {
+    position: relative;
+    height: 45vh;
+    min-height: 300px;
+    background: url('../images/atelier-cuivre.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--blanc, #FFFFFF);
+}
+
+.voile-accueil {
+    background: rgba(47, 62, 70, 0.65);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 700px;
+    margin: 0 1.5rem;
+}
+
+.en-tete-creations h1 {
+    font-family: var(--police-titre, serif);
+    font-size: clamp(2rem, 4vw, 3.2rem); /* Taille fluide selon l'écran */
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+    filter: var(--filter-cuivre);
+
+}
+
+.en-tete-creations p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    opacity: 0.95;
+}
+
+/* --- 3. SECTION EXPLICATION DES BIENFAITS --- */
+.section-explication {
+    padding: 5rem 0 2.5rem 0;
+}
+
+.boite-explication {
+    background: var(--blanc, #FFFFFF);
+    padding: 3.5rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 6px solid var(--cuivre, #B87333);
+}
+
+.boite-explication h2 {
+    font-family: var(--police-titre, serif);
+    color: var(--vert-principal, #4A7C59);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 1rem;
+}
+
+.texte-introduction {
+    font-size: 1.15rem;
+    color: var(--texte-sombre, #2F3E46);
+    margin-bottom: 3rem;
+    max-width: 900px;
+}
+
+/* Grille des bienfaits */
+.grille-bienfaits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.point-bienfait {
+    background: var(--beige-fond, #F9F7F2);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.point-bienfait:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.icone-bienfait {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    display: block;
+}
+
+.point-bienfait h4 {
+    font-family: var(--police-titre, serif);
+    color: var(--vert-principal, #4A7C59);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.point-bienfait p {
+    font-size: 0.95rem;
+    color: var(--texte-sombre, #2F3E46);
+    line-height: 1.6;
+}
+
+/* --- 4. GRILLE DE LA GALERIE --- */
+.section-galerie {
+    padding: 3.5rem 0 6rem 0;
+}
+
+.grille-creations {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 3rem 2.5rem;
+}
+
+/* --- 5. CARTES DES CRÉATIONS --- */
+.carte-creation {
+    background: var(--blanc, #FFFFFF);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Égalise la hauteur de toutes les cartes */
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.carte-creation:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.image-creation {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+}
+
+.image-creation img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.carte-creation:hover .image-creation img {
+    transform: scale(1.08);
+}
+
+.etiquette {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--cuivre, #B87333);
+    color: #FFFFFF;
+    padding: 6px 16px;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.infos-creation {
+    padding: 2rem 1.8rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.infos-creation h3 {
+    font-family: var(--police-titre, serif);
+    color: var(--vert-principal, #4A7C59);
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+.infos-creation p {
+    font-size: 0.95rem;
+    color: var(--texte-sombre, #2F3E46);
+    opacity: 0.9;
+    margin-bottom: 1.8rem;
+    flex-grow: 1; /* Pousse le pied de carte vers le bas */
+}
+
+/* Bas de carte (Prix et Bouton) */
+.pied-de-carte {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    padding-top: 1.2rem;
+    margin-top: auto; /* Aligne parfaitement les pieds de toutes les cartes */
+}
+
+.prix {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--texte-sombre, #2F3E46);
+}
+
+.bouton-achat {
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid var(--cuivre, #B87333);
+    color: var(--cuivre, #B87333);
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.bouton-achat:hover {
+    background: var(--cuivre, #B87333);
+    color: #FFFFFF;
+}
+
+/* --- 6. ADAPTATION RESPONSIVE (MEDIA QUERIES) --- */
+
+/* Tablettes et écrans moyens */
+@media screen and (max-width: 992px) {
+    .conteneur {
+        padding: 0 1.5rem;
+    }
+
+    .boite-explication {
+        padding: 3rem 2rem;
+    }
+
+    .grille-creations {
+        gap: 2.5rem 2rem;
+    }
+}
+
+/* Mobiles (Smartphones) */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 70px; /* Réduction de l'espace haut sur mobile */
+    }
+
+    .en-tete-creations {
+        height: 38vh;
+    }
+
+    .voile-accueil {
+        padding: 1.8rem 1.2rem;
+    }
+
+    .section-explication {
+        padding: 3.5rem 0 1.5rem 0;
+    }
+
+    .boite-explication {
+        padding: 2.2rem 1.5rem;
+        border-left-width: 5px;
+    }
+
+    .texte-introduction {
+        margin-bottom: 2rem;
+    }
+
+    .grille-bienfaits {
+        gap: 1.5rem;
+    }
+
+    .point-bienfait {
+        padding: 1.5rem;
+    }
+
+    .section-galerie {
+        padding: 2.5rem 0 4.5rem 0;
+    }
+
+    .grille-creations {
+        grid-template-columns: 1fr; /* Passage sur une seule colonne pour un confort de lecture optimal */
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .image-creation {
+        height: 280px; /* Légèrement plus court sur mobile */
+    }
+}
