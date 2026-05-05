@@ -70,7 +70,7 @@ body {
     background: var(--blanc, #FFFFFF);
     padding: 3.5rem 3rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    box-shadow: var(--box-shadow);
     border-left: 6px solid var(--vert-principal, #4A7C59);
 }
 
@@ -102,11 +102,12 @@ body {
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.02);
+    filter: var(--filter-cuivre);
 }
 
 .point-bienfait:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--box-shadow);
 }
 
 .icone-bienfait {
@@ -159,7 +160,7 @@ body {
     background: var(--blanc, #FFFFFF);
     padding: 3.5rem 3rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    box-shadow: var(--box-shadow);
     border-left: 6px solid var(--cuivre, #B87333);
 }
 

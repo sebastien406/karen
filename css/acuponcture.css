@@ -70,7 +70,7 @@ body {
     background: var(--blanc, #FFFFFF);
     padding: 3.5rem 3rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    box-shadow: var(--box-shadow);
     border-left: 6px solid var(--vert-principal, #4A7C59);
 }
 
@@ -179,7 +179,7 @@ body {
     background: var(--blanc, #FFFFFF);
     padding: 3.5rem 3rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    box-shadow: var(--box-shadow);
     border-left: 6px solid var(--cuivre, #B87333);
 }
 
@@ -221,7 +221,7 @@ body {
     height: 380px;
     border-radius: 15px;
     object-fit: cover;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--box-shadow);
     display: block;
 }
 

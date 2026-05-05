@@ -71,7 +71,7 @@ body {
     background: var(--blanc, #FFFFFF);
     padding: 3.5rem 3rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    box-shadow: var(--box-shadow);
     border: 6px solid var(--cuivre, #B87333);
 }
 
@@ -102,11 +102,12 @@ body {
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.02);
+    
 }
 
 .point-bienfait:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--box-shadow);
 }
 
 .icone-bienfait {
@@ -154,7 +155,7 @@ body {
 
 .carte-creation:hover {
     transform: translateY(-12px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--box-shadow);
 }
 
 .image-creation {

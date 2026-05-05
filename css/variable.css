@@ -11,4 +11,5 @@
     --police-titre: 'Playfair Display', serif; /* Élégant pour l'artisanat */
     --police-texte: 'Lato', sans-serif; /* Clair et moderne pour la lecture */
     --filter-cuivre:drop-shadow(0 0 15px var(--cuivre)) drop-shadow(0 0 30px var(--cuivre));
+    --box-shadow: -1px 0px 50px 35px #9f9191;
 }
